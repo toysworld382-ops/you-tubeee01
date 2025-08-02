@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - YouTube Video Downloader</title>
+    <meta name="description" content="Get in touch with our YouTube video downloader support team. We're here to help with any questions or issues you may have.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="canonical" href="https://your-domain.com/contact">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .header-nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            opacity: 0.8;
+        }
+
+        .main-content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .page-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-header h1 {
+            color: #333;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .contact-method {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e1e5e9;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-method:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .contact-method h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .contact-method p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .contact-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background: #5a6fd8;
+            transform: translateY(-1px);
+        }
+
+        .faq-section {
+            margin-bottom: 40px;
+        }
+
+        .faq-section h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .faq-item {
+            background: #f8f9fa;
+            border: 1px solid #e1e5e9;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            background: #5a6fd8;
+        }
+
+        .faq-answer {
+            padding: 20px;
+            color: #555;
+            display: none;
+        }
+
+        .faq-answer.show {
+            display: block;
+        }
+
+        .faq-toggle {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-toggle.rotate {
+            transform: rotate(45deg);
+        }
+
+        .response-time {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .response-time h3 {
+            color: #155724;
+            margin-bottom: 10px;
+        }
+
+        .response-time p {
+            color: #155724;
+            margin: 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-container {
+                padding: 30px 20px;
+                margin: 20px 10px;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="header-nav">
+        <div class="nav-container">
+            <a href="/" class="logo">🎥 YouTube Downloader</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/privacy">Privacy</a></li>
+                <li><a href="/terms">Terms</a></li>
+                <li><a href="/contact" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="page-container">
+            <div class="page-header">
+                <h1>Contact Us</h1>
+                <p>We're here to help! Get in touch with any questions or feedback.</p>
+            </div>
+
+            <div class="response-time">
+                <h3>⚡ Quick Response</h3>
+                <p>We typically respond to all inquiries within 24-48 hours</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-method">
+                    <span class="contact-icon">📧</span>
+                    <h3>Email Support</h3>
+                    <p>For general questions, technical issues, or feedback</p>
+                    <a href="mailto:support@your-domain.com" class="contact-link">Send Email</a>
+                </div>
+
+                <div class="contact-method">
+                    <span class="contact-icon">🐛</span>
+                    <h3>Bug Reports</h3>
+                    <p>Found a bug or technical issue? Let us know!</p>
+                    <a href="mailto:bugs@your-domain.com" class="contact-link">Report Bug</a>
+                </div>
+
+                <div class="contact-method">
+                    <span class="contact-icon">💡</span>
+                    <h3>Feature Requests</h3>
+                    <p>Have an idea for a new feature? We'd love to hear it!</p>
+                    <a href="mailto:features@your-domain.com" class="contact-link">Suggest Feature</a>
+                </div>
+
+                <div class="contact-method">
+                    <span class="contact-icon">⚖️</span>
+                    <h3>Legal Matters</h3>
+                    <p>Copyright, DMCA, or other legal inquiries</p>
+                    <a href="mailto:legal@your-domain.com" class="contact-link">Legal Contact</a>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>Quick Help - Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Why is my download failing?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Download failures can occur due to several reasons:</p>
+                        <ul>
+                            <li><strong>Network issues:</strong> Check your internet connection</li>
+                            <li><strong>Video restrictions:</strong> Some videos may be private or region-locked</li>
+                            <li><strong>Quality selection:</strong> Try a different quality option</li>
+                            <li><strong>Server load:</strong> Try again in a few minutes</li>
+                        </ul>
+                        <p>If the problem persists, please contact our support team with the video URL.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Is this service free?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Our YouTube downloader is completely free to use. There are no hidden fees, subscriptions, or premium accounts required. We believe everyone should have access to download their favorite videos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What video qualities are supported?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We support multiple quality options:</p>
+                        <ul>
+                            <li><strong>4K (2160p):</strong> Highest available quality</li>
+                            <li><strong>Full HD (1080p):</strong> High quality for most uses</li>
+                            <li><strong>HD (720p):</strong> Good quality, smaller file size</li>
+                            <li><strong>SD (480p):</strong> Lower quality, fastest download</li>
+                            <li><strong>Audio Only:</strong> Extract audio in M4A format</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Is it legal to download YouTube videos?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The legality depends on several factors:</p>
+                        <ul>
+                            <li><strong>Personal use:</strong> Generally acceptable for personal, non-commercial use</li>
+                            <li><strong>Copyright:</strong> You must have permission to download copyrighted content</li>
+                            <li><strong>Fair use:</strong> Educational use may be covered under fair use provisions</li>
+                            <li><strong>Your content:</strong> You can always download your own uploaded videos</li>
+                        </ul>
+                        <p>Please ensure you comply with copyright laws and YouTube's Terms of Service.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do you store my downloaded videos?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, we do not store your downloaded videos. Our process works as follows:</p>
+                        <ul>
+                            <li>Videos are temporarily processed on our servers</li>
+                            <li>Files are automatically deleted within 30 minutes</li>
+                            <li>We don't keep any permanent copies</li>
+                            <li>Your privacy and data security are our priorities</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can I download playlists?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Currently, our service is designed for individual video downloads. For playlists, you'll need to download each video separately by pasting individual video URLs.</p>
+                        <p>We're considering adding playlist support in the future based on user feedback!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 30px;">
+                <h3 style="color: #333; margin-bottom: 10px;">📞 Need More Help?</h3>
+                <p style="color: #666; margin-bottom: 15px;">Can't find what you're looking for? Our support team is ready to help!</p>
+                <a href="mailto:support@your-domain.com" style="display: inline-block; padding: 12px 24px; background: #667eea; color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">Contact Support</a>
+            </div>
+
+            <a href="/" class="back-link">← Back to Downloader</a>
+        </div>
+    </main>
+
+    <script>
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq-toggle');
+            
+            if (answer.classList.contains('show')) {
+                answer.classList.remove('show');
+                toggle.classList.remove('rotate');
+                toggle.textContent = '+';
+            } else {
+                // Close all other FAQs
+                document.querySelectorAll('.faq-answer.show').forEach(item => {
+                    item.classList.remove('show');
+                });
+                document.querySelectorAll('.faq-toggle.rotate').forEach(item => {
+                    item.classList.remove('rotate');
+                    item.textContent = '+';
+                });
+                
+                // Open this FAQ
+                answer.classList.add('show');
+                toggle.classList.add('rotate');
+                toggle.textContent = '×';
+            }
+        }
+    </script>
+</body>
+</html>
+
